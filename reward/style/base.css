@@ -1,0 +1,89 @@
+@charset "utf-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+body{ /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+  font:14px/1 '微软雅黑',YaHei,tahoma,Helvetica,"Hiragino Sans GB",Arial,"\5b8b\4f53",sans-serif;
+  color:#333;
+  background: #fff;
+}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+table{ border-collapse:collapse;border-spacing:0;}
+ol,ul{ list-style:none;}
+fieldset,img{ border:0 none;}
+:focus { outline:0;}
+a{ 
+	color:#333;
+	text-decoration:none;
+}
+a:hover {
+	color: #33cccc;
+	text-decoration:none;
+}
+button,input{
+    border: 0 none transparent;-webkit-appearance: none;
+    outline:0;
+    border-radius: 0px;
+}
+/*去除input默认样式*/
+input{
+  outline:0;
+}
+/*input {-webkit-appearance:none; }
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input{-webkit-appearance:none;}*/
+input:focus{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-modify:read-write-plaintext-only;
+}
+textarea {
+    resize: none;
+}
+input:focus, textarea:focus {
+    outline: none;
+}
+/* IE10 input出现X，小眼睛的问题 */
+input::-ms-clear{display:none;}
+input::-ms-reveal { display: none; }
+/* 高亮选中 */
+::-moz-selection {background:#08c;color:#fff;}
+::selection {background:#08c;color:#fff;}
+
+/* Placeholder Color */
+::-moz-placeholder {color: #aaa;}
+::-webkit-input-placeholder {color: #aaa;}
+::-ms-input-placeholder {color:#aaa;}
+:focus{outline:none;}
+
+/*功能性CSS*/
+.clearfix {
+	*zoom:1;
+	clear:both;
+}
+.clearfix:before,.clearfix:after {
+	display:table;
+	line-height:0;
+	content:"";
+}
+.clearfix:after {
+	clear:both;
+}
+/*向左向右*/
+.r{float:right;}
+.l{float:left;}
+
+/*显示隐藏*/
+.hide { display:none;}
+.show { display:block;}
+
+.invisible {visibility:hidden;}
+.affix {position:fixed;top:0;}
+
+/*省略号*/
+.ell { text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+
+/*内联块*/
+.inb { display:inline-block; vertical-align:middle; *display:inline; *zoom:1;}
+
+/*强制文本换行*/
+.text-wrap { word-wrap:break-word;word-break:break-all;}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="style/common.css">
+	<link rel="stylesheet" href="style/reward.css">
+</head>
+<body>
+	<div class="wapper">
+		<div class="header">
+			<dl class="clearfix">
+				<dt><img src="images/head-icon.png" alt=""></dt>
+				<dd class="anhei">《暗黑血统》</dd>
+				<dd>3D狠动作手游</dd>
+			</dl>
+			<a href="jvascript:void(0);" class="and-down r">安卓下载</a>
+		</div>
+		<div class="con">
+			<div class="re-img">
+				<img src="images/m_bg1.jpg" alt="">
+			</div>
+			<div class="re-act">
+				<div class="rotate-bg"></div>
+				<div class="lottery-star">
+					<img src="images/jt.png" id="img" style="transform: rotate(0deg);">
+					<button  id="lotteryBtn"></button>
+				</div>
+			</div>
+			<div class="rew-rule">
+				<h2>抽奖规则</h2>
+				<div class="rule-text">
+					<p>1.	抽奖时间2月5日—2月13日</p>
+					<p>2.	每个玩家一天只能抽奖一次</p>
+					<p>3.	所有中奖者官方后台都将记录，中奖信息以后</p>
+					<p>台记录数据为准，如有异常请联系客服反馈</p>
+					<p>4.	以上获得最终解释权归暗黑血统运营团队所有</p>
+				</div>
+			</div>
+			<div class="rew-info">
+				<h2>中奖信息</h2>
+				<div class="info">
+					<p>您在<span class="time">2016月2月7日</span>抽奖获得<span class="rew-name">IPHONE6P(64G)</span></p>
+					<p>您在<span class="time">2016月2月7日</span>抽奖获得<span class="rew-name">IPHONE6P(64G)</span></p>
+					<p>您在<span class="time">2016月2月7日</span>抽奖获得<span class="rew-name">IPHONE6P(64G)</span></p>
+					<p>您在<span class="time">2016月2月7日</span>抽奖获得<span class="rew-name">IPHONE6P(64G)</span></p>
+					<p>您在<span class="time">2016月2月7日</span>抽奖获得<span class="rew-name">IPHONE6P(64G)</span></p>
+				</div>
+			</div>
+			<a href="javascript:void(0);" class="back-gw">返回官网</a>
+			<div class="footer">
+				<p>沪ICP备14046007号 | 2011 All Rights Reserved </p>
+				<p>上海爱特米科技有限公司 版权所有 </p>
+			</div>
+			<div class="tc1 tc">
+				<p class="close"><em></em><em></em></p>
+				<h1 class="h1">恭喜您获得奖品XXXXXX</h1>
+				<a href="javascript:void(0);" class="sure-btn">确定</a>
+			</div>
+			<div class="tc2 tc">
+				<p class="close"><em></em><em></em></p>
+				<h1 class="h1">恭喜您获得奖品XXXXXX</h1>
+				<form action="" class="info">
+					<p class="numer-tip"></p>
+					<p>
+						<label>手机号：</label>
+						<input type="text" placeholder="请输入手机号码" id="phone" name="phone">
+					</p>
+					<p>
+						<label>姓名：</label>
+						<input type="text" placeholder="请输入您的姓名" id="cnname" name="cnname">
+					</p>
+					<p>
+						<label>邮寄地址：</label>
+						<input type="text" placeholder="请输入您的收货地址" id="address" name="">
+					</p>
+					<a href="javascript:void(0);" class="sure-btn sub-btn">确定</a>
+				</form>
+				<div class="f-tip">
+					<p>友情提示：</p>
+					<p>请正确填写获奖信息，如获奖信息不正确将视为放弃获奖权利。</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jQueryRotate.2.2.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script>
+$(function(){ 
+     $("#lotteryBtn").click(function(){
+		// $("#lotteryBtn").attr('disabled',true).css("cursor","default"); 
+        lottery(); 
+    });
+}); 
+function lottery(){ 
+	var obj = {"isHasChance":"true","rotate":240,"results":"iphone 5s!!"}
+
+    $("#img").rotate({ 
+					duration:3000, //转动时间 
+					angle: 0, //默认角度
+					animateTo:360*6+obj.rotate, //转动角度 
+					easing: $.easing.easeOutSine, 
+					callback: function(){ 
+						alert(obj.results); 
+						$("#lotteryBtn").attr('disabled',false).css("cursor","pointer"); 
+					} 
+				});
+};
+
+
+//弹窗关闭
+$(".tc").on("click",".close",function(){
+	$(this).parent().hide();
+});
+$(".tc1").on(".sure-btn","click",function(){
+	$(this).parent().hide();
+});
+//手机号验证
+$(".tc2").on("click",".sub-btn",function(){
+	var phoneRge = /^1[3|4|5|7|8]\d{9}$/;
+	var number = $("#phone").val();
+	var data = $(".info").serialize();
+	$(".numer-tip").text("");
+	if(phoneRge.test(number)){
+		$(".numer-tip").text("请输入正确的手机号码");
+		return;
+	}
+	// $.ajax({
+	// 	type:"post",
+	// 	url:"/lotteryapi/saveuserinfo",
+	// 	data:data,
+	// 	dataType:"json",
+	// 	success:function(res){
+	// 		if(res && res === 0){
+
+	// 		}
+	// 	}
+	// });
+});
+
+// $(function(){
+// 	var timeOut = function(){  //超时函数
+// 		$("#lotteryBtn").rotate({
+// 			angle:0, 
+// 			duration: 10000, 
+// 			animateTo: 2160, //这里是设置请求超时后返回的角度，所以应该还是回到最原始的位置，2160是因为我要让它转6圈，就是360*6得来的
+// 			callback:function(){
+// 				//alert('网络超时')
+// 				$(".tc1").show().find("h1").text('网络超时');
+// 			}
+// 		}); 
+// 	}; 
+// 	var rotateFunc = function(awards,angle,text){  //awards:奖项，angle:奖项对应的角度
+// 		$('#lotteryBtn').stopRotate();
+// 		$("#lotteryBtn").rotate({
+// 			angle:0, 
+// 			duration: 5000, 
+// 			animateTo: angle+1440, //angle是图片上各奖项对应的角度，1440是我要让指针旋转4圈。所以最后的结束的角度就是这样子^^
+// 			callback:function(){
+// 				$(".tc2").show().find("h1").text(text);
+// 			}
+// 		}); 
+// 	};
+	
+// 	$("#lotteryBtn").rotate({ 
+// 	   bind: 
+// 		 { 
+// 			click: function(){
+// 					// $.ajax({
+// 					// 	type:"post",
+// 					// 	url:"/lotteryapi/do",
+// 					// 	data:"flag=chunjie2016&room=room1&gameinception",
+// 					// 	dataType:"json",
+// 					// 	success:function(res){
+// 					// 		if(res && res === 0){
+// 								var data = [1,2,3,0]; //返回的数组
+// 								//data = data[Math.floor(Math.random()*data.length)];
+// 								data=6;
+// 									if(data==1){
+// 										rotateFunc(1,0,'恭喜您获得奖品微信礼包1')
+// 									}
+// 									if(data==2){
+// 										rotateFunc(2,45,'恭喜您获得奖品30元京东卡')
+// 									}
+// 									if(data==3){
+// 										rotateFunc(3,90,'恭喜您获得奖品签名T恤')
+// 									}
+// 									if(data==4){
+// 										rotateFunc(4,135,'恭喜您获得奖品恶魔公仔')
+// 									}
+// 									if(data==5){
+// 										rotateFunc(5,170,'恭喜您获得奖品10元京东卡')
+// 									}
+// 									if(data==6){
+// 										rotateFunc(6,212,'恭喜您获得奖品微信礼包2')
+// 									}
+// 									if(data==7){
+// 										rotateFunc(7,293,'恭喜您获得奖品iphone6P')
+// 									}
+// 									if(data==8){
+// 										rotateFunc(8,320,'很遗憾，这次您未抽中奖')
+// 									}
+// 					// 		}
+// 					// 	}
+// 					// });
+// 			}
+// 		 } 
+	   
+// 	});
+	
+// })
+</script>
+</html>

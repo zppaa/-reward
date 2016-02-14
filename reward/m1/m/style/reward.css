@@ -1,0 +1,34 @@
+@charset "utf-8";
+.re-img{display:block;width: 100%;}
+.re-act{position:relative;width: 100%;height: 3.25rem;background: url(../images/m_ng2.jpg) no-repeat;}
+.re-act .rotate-bg{position:absolute;left:50%;margin-left: -1.1875rem; width: 2.375rem;height: 2.45rem;background: url(../images/reward.png) no-repeat; background-size: 100% 100%;z-index: 1;top: 0.26rem;}
+.re-act .lottery-star{position: absolute;left:50%;margin-left: -1.485rem;width: 2.97rem;height: 2.97rem;background:url(../images/zp1.png) no-repeat;background-size: 100% 100%;}
+.re-act .lottery-star img{width: 0.96rem;height:0.93rem;position: absolute;top: 50%;left: 50%;margin-top: -0.5rem;margin-left: -0.48rem;z-index: 100;}
+.rew-rule h2,.rew-info h2{font-size: 0.18rem;color: #eec754;padding: 0 0.12rem 0.16rem;}
+.rew-rule .rule-text,.rew-info .info{padding: 0.18rem 0.16rem;background-color: #101725;}
+.rew-rule .rule-text p,.rew-info .info p{font-size: 0.12rem;color: #b2b9be;line-height: 0.2rem;}
+.rew-info h2{margin-top: 0.34rem;}
+.rew-info .info p{letter-spacing: 1px;}
+.rew-info .info p .time,.rew-info .info p .rew-name{color: #eec754;}
+.back-gw{width: 2.98rem;height: 0.47rem;display:block;background: url(../images/down_btn.jpg) no-repeat;background-size: 100% 100%;margin: 0.43rem auto; font-size:0.2rem ;color: #fff;font-weight: bold;text-align: center;line-height: 0.47rem;}
+.tc{display: none; position: fixed;width: 90%;height: 1.96rem;background: url(../images/tc1.jpg) no-repeat;top: 2rem;left: 50%;margin-left: -45%;z-index: 1000;}
+.tc1 h1,.tc2 h1{width: 80%;margin: 0 auto;text-align: center;font-size: 0.24rem;color: #f4dd2c;font-weight: bold;line-height: 0.3rem;}
+.tc1 .h1{margin-top: 0.4rem;}
+.sure-btn{display: block;width: 1.64rem;height: 0.39rem;background: url(../images/down_btn.jpg) no-repeat;background-size: 100% 100%;margin: 0.1rem auto;font-size: 0.15rem;color: #fff;font-weight: bold;text-align: center;line-height: 0.39rem;}
+.tc2{height: 3.425rem;background: url(../images/tc2.jpg) no-repeat;top: 1.2rem;}
+.tc2 h1{width: 80%;margin: 0.3rem auto 0.05rem;}
+.tc2 form p:not(.numer-tip){margin-bottom: 0.1rem;padding: 0 0.1rem;}
+.tc2 form .numer-tip{font-size: 0.01rem;color: red;font-size: 0.01rem;
+    color: red;
+    text-align: center;
+    height: 0.15rem;
+    text-indent: 0.5rem;}
+.tc2 label{display: inline-block; width: 0.75rem;font-size: 0.15rem;color: #fff;text-align: right;}
+.tc2 input{width: 1.73rem;
+    padding-left: 0.05rem;
+    height: 0.29rem;
+    font-size: 0.13rem;
+    background: #fff;
+    color: #51576a;
+    border: 0 none;}
+.tc2 .f-tip{font-size: 0.11rem;color: #727b83;padding: 0.03rem 0.19rem;line-height: 0.15rem;}

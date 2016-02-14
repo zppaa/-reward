@@ -1,0 +1,79 @@
+@charset "utf-8";
+/*弹窗*/
+.down-box{position: fixed;width: 100%;height: 100%;left: 0;top: 0;background: rgba(18,20,28,0.5);display: none;}
+.down-con{position: absolute;width: 560px;height: 327px;background: #282d3c;border: 1px solid #303748;left: 50%;top: 50%;margin-left: -280px;margin-top: -161px;}
+.down-con .android{border-right: 1px solid #181b24;margin: 32px 0;padding: 25px 57px;}
+.down-con .ios{margin-top: 57px;margin-left: 338px;}
+.down-con a{display: block;width: 164px;height: 57px;}
+.down-con .android a{background: url(../images/and_btn.jpg); margin-top: 10px;}
+.down-con .ios input{width: 157px;height: 36px;border: 1px solid #3a0607;padding-left: 5px;}
+.down-con .ios a{background: url(../images/ios_btn.jpg);margin-top: 14px;}
+.down-con .ios h1{font-size: 25.5px;color: #fff;}
+.down-con .ios h2{font-size: 14px;color: #727b83;margin:15px 0 55px;width: 164px;}
+
+/*footer*/
+.footer{height:86px; background:#000; min-width:1240px;background-color:#000;position: relative;padding-top: 30px;}
+.footer .in{ width:990px; margin:0 auto; padding:15px 0 0 190px}
+.footer .logo{ float:left; margin-right:14px}
+.footer .f-con{ float:left; color:#666; font-size:12px}
+.footer .f-con p{ padding-bottom:8px}
+.footer .f-con a,.footer .f-con a:hover{ color: #666}
+/*背景*//*导航*/
+.com-wapper{position: relative;width: 100%;background-color: #000101;min-width: 1230px;}
+.combg-box{width: 100%;position: absolute;top: 0;left: 0;}
+.combg-box .combg{width: 100%;height: 500px;}
+.combg-box .combg1{
+	background: url(../images/demo1-shouye.jpg) no-repeat center top;
+}
+.combg-box .combg2{
+	
+	background: url(../images/demo1-shouye-02.jpg) no-repeat center top;
+}
+.combg-box .combg3{
+	background: url(../images/demo1-shouye-03.jpg) no-repeat center;
+}
+.combg-box .combg4{
+	background: url(../images/demo1-shouye-04.jpg) no-repeat center;
+}
+.ml1{margin-left: 1px;}
+.mt20{margin-top: 20px;}
+.mt40{margin-top: 40px;}
+.com-container{position:relative;width: 100%;top: 0;left: 0;}
+.w-con{width: 1230px;margin: 0 auto;position: relative;}
+.comtab{margin-top: 380px;position: relative;}
+.comtab em{position: absolute;width: 56px;height: 126px;top: 5px;}
+.comtab .l-icon{left: -49px;background: url(../images/l.png)no-repeat;}
+.comtab .r-icon{right: -49px;background: url(../images/r.png)no-repeat;}
+.comtab .comtab-li{float: left;width:204px ;height: 92px;}
+.comtab .comtab-li1{background: url(../images/tab_btn.png)no-repeat;}
+.comtab .comtab-li2{background: url(../images/tab_btn.png)no-repeat -204px;}
+.comtab .comtab-li3{background: url(../images/tab_btn.png)no-repeat -409px;}
+.comtab .comtab-li4{background: url(../images/tab_btn.png)no-repeat -614px;}
+.comtab .comtab-li5{background: url(../images/tab_btn.png)no-repeat -819px;}
+.comtab .comtab-li6{background: url(../images/tab_btn.png)no-repeat -1024px;}
+.comtab .comtab-li:hover{background-image: url(../images/tab_btn_act.png)}
+/*con-left 左侧*/
+.con-left{float: left; width: 950px;margin-top: 33px;}
+.a-active{border-bottom: 2px solid #2f8c92;color:#2f8c92;}
+.tab-a{float: left;text-align: center;font-size: 16px;}
+.more{float: right;margin-right: 19px;font-size:12px;color: #6d757f;height: 50px;line-height: 50px;}
+.video-icon{position: absolute;width: 48px;height: 48px;left: 50%;top:50%;margin-left: -24px;margin-top: -24px;background: url(../images/v-icon.png);}
+/*page*/
+.page{float: right;margin-top: 55px;}
+.page a{display: block;float: left;font-size: 14px;color: #3f4760;height: 24px;line-height: 24px;padding:0 6px;}
+.page a.cur{border: 1px solid #24282b;color: #fff;background: #030911;padding:0 8px;}
+/*con-right 右侧导航栏*/
+.con-right{float: right;width: 268px;height:760px;background: url(../images/com-r.png)no-repeat;margin-top: 33px;}
+.con-right ul{width: 268px;margin-top: 400px;overflow: hidden;}
+.con-right ul li{float: left;margin-left: 45px;line-height: 50px; width: 80px;}
+.con-right ul li a{font-size: 14px;color: #b76f34;position: relative;}
+.con-right ul li a .r-icon{position: absolute; left: -25px;top:0;width: 20px;height: 20px;background: ;background: url(../images/r_icon.png) no-repeat center center;}
+.con-right ul li a:hover{color: #ffbb84;}
+.con-right ul li a:hover .r-icon{background: url(../images/r-_icon_act.png)no-repeat center center;}
+.con-right a.r-more{display: block;width: 118px;margin:0 auto;height: 24px;color:#b76f34 ;line-height: 24px;text-align: center;border:1px solid #532210;} 
+.con-right a.r-more:hover{text-decoration: underline; };
+
+
+
+
+
